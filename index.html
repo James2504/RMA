@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Salida SMI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hoja-salida">
+      
+         <div class="p-rma">
+               <img src="Imagen1.jpg" alt="imag-rma">
+            </div>
+    
+
+        <section class="datos">
+            <div class="datos-cliente">
+                <h3>FORMATO DE EQUIPO PARA REVISIÓN Y REPARACIÓN</h3> <br>
+                <br><div class="info">
+                    <div class="info">
+                        <label for="atencion">Razon Social:</label>
+                    <input type="text" id="social" value="Soluciones móviles Integrales SA de CV" readonly>
+                    </div>
+                    
+                    <label for="atencion">Mensajeria # de Cuenta:</label>
+                    <input type="text" id="atencion" readonly>
+                    <label for="comentarios">Dirección Embarque:</label>
+                    <p id="comentarios">AV.TITAN #140, COL.Cuauhtémoc, San Nicolas de los Garza, N.L. CP:66450</p>
+                    <label for="comentarios">Dirección Fiscal:</label>
+                    <p id="comentarios">AV.TITAN #140, COL.Cuauhtémoc, San Nicolas de los Garza, N.L. CP:66450</p>
+
+                    <label for="num-soporte">RFC:</label>
+                    <input type="text" id="num-rfc" value="SMI-020712UE9" readonly>
+                    
+                    
+                </div>
+            </div>
+        
+            <div class="datos-extra">
+                <h3>Información</h3> <br>
+                <br><div class="extra-info">
+                    <br><label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha">
+                    <label for="num-soporte">Folio:</label>
+                    <input type="text" id="num-soporte" readonly>
+                    <label for="num-soporte">Contacto:</label>
+                    <input type="text" id="nombre-contacto" value="Jaime Ramirez" readonly>
+                    <div class="extra-info">
+                        <label for="num-soporte">Correo:</label>
+                        <input type="text" id="correo-contacto" value="smi-customerservice@e-smi.net" readonly>
+                    </div>
+                    <label for="num-soporte">Telefono:</label>
+                    <input type="text" id="telefono-contacto" value="(81)8379-0696" readonly>
+
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="tabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número de Serie</th>
+                        <th>Modelo</th>
+                        <th>Accesorios</th>
+                        <th>Problema</th>
+                        <th class="tipo">C, G, T&M </th>
+                    </tr>
+                </thead>
+                <tbody id="tablaCuerpo">
+                    <tr>
+                        <td><input type="text" id="ns1" name="ns[]"></td>
+                        <td><input type="text" id="modelo1" name="modelo[]"></td>
+                        <td><input type="text" id="acce" name="acce[]"></td>
+                        <td><p id="comentarios2" contenteditable="true"></p></td>
+                        <td><input type="text" id="tipo" name="tipo[]"></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+            <!-- Elemento para mostrar la cantidad de filas -->
+            <p id="cantidadFilas">Cantidad: 1</p>
+        </section>
+        
+        <!-- Botón para agregar filas -->
+        <button type="button" onclick="solicitarCantidadFilas()">Agregar Fila</button>
+
+        <button class="no-print" onclick="window.print()">Imprimir</button>
+
+        <HR></HR>
+
+        <div class="observa">
+            <h5>C (contrato) G (garantía) T&M (tiempo y materiales)</h5>
+            <h1>Observaciones</h1>
+            <p>Favor de tener cuidado de no ejercer presión sobre los tornillos contra las partes plásticas ya que con el tiempo es más fácil de quebrar si se ejerce demasiada presión.</p>
+        </div>
+        
+
+
+    
+    <!-- Incluir el archivo de JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

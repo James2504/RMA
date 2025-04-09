@@ -1,0 +1,313 @@
+/* Estilo para el contenedor de la firma */
+.firma {
+    margin-top: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.linea-firma {
+    border-top: 2px solid #000;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.firma p {
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Estilos de impresión */
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .hoja-salida {
+        width: 210mm;
+        height: auto;
+        margin: 0 auto;
+        padding: 10mm;
+    }
+
+    .tabla table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .tabla th, .tabla td {
+        border: none;
+        padding: 5px;
+    }
+
+    input, select {
+        border: none;
+        text-align: left;
+    }
+
+    button, .no-print {
+        display: none !important;
+    }
+
+    #comentarios{
+        border: none !important;
+    }
+}
+
+/* Estilos Generales */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    overflow-y: auto;
+}
+
+.hoja-salida {
+    width: 80%;
+    max-width: 1200px;
+    min-height: auto;
+    background-color: white;
+    border: 2px solid #93a74e;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 100px;
+    padding: 10px;
+}
+
+.empresa h2 {
+    margin: 0;
+    text-align: right;
+    font-size: 18px;
+}
+
+.empresa p {
+    margin: 0;
+    text-align: center;
+    font-size: 10px;
+}
+
+/* Ajustes para datos del cliente y datos extra */
+.datos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.datos-cliente, .datos-extra {
+    width: 45%;
+    background-color: #f9f9f9;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.datos-cliente h3, .datos-extra h3 {
+    font-size: 14px;
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+input, select {
+    width: 100%;
+    padding: 5px;
+    font-size: 12px;
+    margin: 3px 0;
+    box-sizing: border-box;
+}
+
+.tabla table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tabla th, .tabla td {
+    border: 1px solid #000;
+    padding: 3px;
+    text-align: center;
+}
+
+.tabla input {
+    width: 90%;
+    padding: 3px;
+    text-align: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #93a74e;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+.eliminar-btn {
+    padding: 1px 2px;
+    background-color: #ff0000;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .hoja-salida {
+        width: 90%;
+        padding: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .datos {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .datos-cliente, .datos-extra {
+        width: 100%;
+    }
+
+    .tabla table {
+        font-size: 12px;
+    }
+
+    input, select {
+        font-size: 14px;
+        padding: 4px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo img {
+        width: 60px;
+    }
+
+    .hoja-salida {
+        padding: 10px;
+    }
+
+    .datos-cliente h3, .datos-extra h3 {
+        font-size: 14px;
+    }
+
+    .tabla input {
+        font-size: 12px;
+        padding: 3px;
+    }
+
+    button {
+        padding: 6px 10px;
+    }
+}
+
+
+.p-rma {
+    height: 130px;
+    margin-top: -20px;
+    display: flex; /* Activa Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+
+.p-rma img {
+   height: 40px;
+}
+
+.observa p,h5,h1{
+    text-align: center;
+    font-size: 15px;
+
+}
+
+#df {
+    font-size: 8px !important;
+}
+
+#comentarios {
+    width: 99%; /* Ocupa todo el ancho del contenedor */
+    height: 30px; /* Ajusta la altura del cuadro */
+    font-size: 12px; /* Tamaño de letra */
+    padding: 10px; /* Espaciado interno */
+    border: .1px solid #323131; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    resize: both; /* Permitir redimensionar el cuadro */
+    padding: 2px;
+    font-family: Arial, sans-serif;
+}
+
+
+#comentarios2 {
+    width: 99%; /* Ocupa todo el ancho del contenedor */
+    height: 25px; /* Ajusta la altura del cuadro */
+    font-size: 10px; /* Tamaño de letra */
+    padding: 10px; /* Espaciado interno */
+    border: .1px solid #323131; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    resize: both; /* Permitir redimensionar el cuadro */
+    padding: 0px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    text-align: center;
+    
+}
+
+#falla{
+    font-size: 9px;
+    width: 100%;
+
+}
+
+.tipo{
+    width: 7%;
+}
